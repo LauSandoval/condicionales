@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style-2.css">
+  <script src="https://kit.fontawesome.com/2e3600b630.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>Stickers</title>
+</head>
+
+<body>
+<h1 class="text-center mt-4">Puedes llevar hasta 10 Stickers en Total</h1> <br>
+  <div class="productos">
+    <div class="card" style="width: 18rem;">
+      <img src="assets/img/Hello_Kitti.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Hello Kitti</h5>
+        <p>Ingrese Cantidad</p>
+        <input class="form-control "id="cantidad1"></input>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="assets/img/Pandita.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Osito Panda</h5>
+        <p>Ingrese Cantidad</p>
+        <input class="form-control" id="cantidad2"></input>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="assets/img/success.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Patito</h5>
+        <p>Ingrese Cantidad</p>
+        <input class="form-control" id="cantidad3"></input>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+  <p id="resultado" ></p>
+  <button class="btn btn-light" onclick="
+  let cantidad1 = document.querySelector('#cantidad1').value
+  let cantidad2 = document.querySelector('#cantidad2').value
+  let cantidad3 = document.querySelector('#cantidad3').value
+  let cantidadtotal= Number(cantidad1)+Number(cantidad2)+Number(cantidad3)
+
+if(cantidadtotal <= 10 ){
+par = document.querySelector('#resultado')
+par.innerHTML = `El número de stikers seleccionados es: ${cantidadtotal}`
+par.classList.remove('yellow')
+par.classList.add('white') 
+}
+else{
+par = document.querySelector('#resultado')
+par.innerHTML = 'Superaste la cantidad permitida de stickers'
+par.classList.remove('white')
+par.classList.add('yellow') 
+    }
+"> Verificar </button>
+</div>
+<div class="row text-center mt-5">
+  <div class="col">
+      <a href="index.html" class="btn btn-warning">Volver Página Principal</a>
+</div>
+</div>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

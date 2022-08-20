@@ -1,0 +1,34 @@
+body {
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin-top: 50px;
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(90deg, rgb(223, 81, 214), #b4c8d2)fixed;
+}
+img{
+   width: 100px;
+   height: 250px;
+}
+.productos{
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+gap: 15px;
+width: 100%;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+button{
+align-items: center;
+}
+.yellow{
+   color: rgb(221, 255, 0);
+}
+
+.white{
+   color: rgb(251, 251, 253);
+}
+h1{
+   color: rgb(58, 3, 51);
+}
